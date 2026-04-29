@@ -1,19 +1,19 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Gestor Académico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" style="max-width: 600px;">
         <nav>
-                <a href="cursos.html">Cursos</a> | <a href="tareas.html">Tareas</a> | 
-                        <a href="perfil.html">Perfil</a> | <a href="configuracion.html">Configuración</a> |
-                                <a href="#" onclick="logout()">Cerrar Sesión</a>
-                                    </nav>
-                                        <h1 id="welcome">Bienvenido</h1>
-                                            <div id="stats">
-                                                    <p>Cursos registrados: <span id="totalCursos">0</span></p> [cite: 27]
-                                                            <p>Tareas pendientes: <span id="tareasPendientes">0</span></p> [cite: 29]
-                                                                </div>
-                                                                </div>
-                                                                <script src="app.js"></script>
-                                                                <script>
-                                                                    checkAuth();
-                                                                        const user = JSON.parse(localStorage.getItem(KEYS.SESSION));
-                                                                            const config = JSON.parse(localStorage.getItem(KEYS.CONFIG));
-                                                                                document.getElementById('welcome').innerText = `Hola, ${config?.nombreVisible || user.nombres}`; // [cite: 81]
-                                                                                </script>
+            <a href="cursos.html">Cursos</a> | <a href="tareas.html">Tareas</a> | 
+            <a href="perfil.html">Perfil</a> | <a href="configuracion.html">Ajustes</a> |
+            <a href="#" onclick="logout()">Salir</a> </nav>
+        <h1>Hola, <span id="userName">Cargando...</span></h1> <div class="stats">
+            <p>📚 Cursos: <span id="totalCursos">0</span></p> <p>📝 Tareas totales: <span id="totalTareas">0</span></p> </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

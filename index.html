@@ -2,29 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Gestor Académico</title>
-                <link rel="stylesheet" href="styles.css">
-                </head>
-                <body>
-                    <div class="container">
-                            <p>Cargando aplicación...</p>
-                                </div>
+    <title>Gestor Académico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cargando aplicación...</h2>
+    </div>
 
-                                    <script src="app.js"></script>
-                                        <script>
-                                                // Lógica de redirección inicial [cite: 84, 115]
-                                                        window.onload = function() {
-                                                                    const session = JSON.parse(localStorage.getItem('sesionActiva')); // [cite: 89]
-                                                                                
-                                                                                            if (session) {
-                                                                                                            // Si hay sesión, va directo al dashboard [cite: 23, 84]
-                                                                                                                            window.location.href = 'dashboard.html';
-                                                                                                                                        } else {
-                                                                                                                                                        // Si no hay sesión, debe loguearse [cite: 84, 85]
-                                                                                                                                                                        window.location.href = 'login.html';
-                                                                                                                                                                                    }
-                                                                                                                                                                                            };
-                                                                                                                                                                                                </script>
-                                                                                                                                                                                                </body>
-                                                                                                                                                                                                </html>
+    <script>
+        // Redirección inmediata basada en la sesión
+        window.onload = () => {
+            const sesion = localStorage.getItem('sesionActiva');
+            if (sesion) {
+                window.location.href = 'dashboard.html';
+            } else {
+                window.location.href = 'login.html';
+            }
+        };
+    </script>
+</body>
+</html>

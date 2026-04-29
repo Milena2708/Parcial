@@ -2,42 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-        <title>Perfil - Gestor Académico</title>
-            <link rel="stylesheet" href="styles.css"> </head>
-            <body>
-                <div class="container">
-                        <nav>
-                                    <a href="dashboard.html">Dashboard</a> | 
-                                                <a href="configuracion.html">Configuración</a>
-                                                        </nav>
-
-                                                                <h2>Mi Perfil</h2>
-                                                                        <div id="perfilInfo">
-                                                                                    <p><strong>Nombre Completo:</strong> <span id="viewNombre"></span></p> <p><strong>Correo:</strong> <span id="viewCorreo"></span></p> <p><strong>DNI:</strong> <span id="viewDni"></span></p> <p><strong>Carrera:</strong> <span id="viewCarrera"></span></p> <p><strong>Ciclo:</strong> <span id="viewCiclo"></span></p> <p><strong>Ciudad:</strong> <span id="viewCiudad"></span></p> <button onclick="habilitarEdicion()">Editar Datos</button>
-                                                                                            </div>
-
-                                                                                                    <form id="formEditarPerfil" class="hidden" onsubmit="actualizarPerfil(event)">
-                                                                                                                <input type="text" id="editNombres" placeholder="Nombres" required>
-                                                                                                                            <input type="text" id="editApellidos" placeholder="Apellidos" required>
-                                                                                                                                        <input type="email" id="editCorreo" placeholder="Correo" required>
-                                                                                                                                                    <input type="text" id="editDni" placeholder="DNI" required maxlength="8">
-                                                                                                                                                                <input type="text" id="editCarrera" placeholder="Carrera" required>
-                                                                                                                                                                            <input type="number" id="editCiclo" placeholder="Ciclo" required>
-                                                                                                                                                                                        <input type="text" id="editCiudad" placeholder="Ciudad" required>
-                                                                                                                                                                                                    <button type="submit">Guardar Cambios</button>
-                                                                                                                                                                                                                <button type="button" onclick="cancelarEdicion()">Cancelar</button>
-                                                                                                                                                                                                                        </form>
-
-                                                                                                                                                                                                                                <hr>
-                                                                                                                                                                                                                                        <button onclick="eliminarCuenta()" style="background-color: #ff4444; color: white;">
-                                                                                                                                                                                                                                                    Eliminar Cuenta Permanentemente
-                                                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                                                </div>
-
-                                                                                                                                                                                                                                                                    <script src="app.js"></script> <script>
-                                                                                                                                                                                                                                                                            checkAuth(); //
-                                                                                                                                                                                                                                                                                    // Lógica para cargar datos al iniciar
-                                                                                                                                                                                                                                                                                            window.onload = mostrarDatosPerfil; 
-                                                                                                                                                                                                                                                                                                </script>
-                                                                                                                                                                                                                                                                                                </body>
-                                                                                                                                                                                                                                                                                                </html>
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav><a href="dashboard.html">Volver</a></nav>
+        <h2>Datos Personales</h2>
+        <div id="info">
+            <p><strong>DNI:</strong> <span id="viewDni"></span></p> <p><strong>Carrera:</strong> <span id="viewCarrera"></span></p> </div>
+        <button onclick="habilitarEdicion()">Editar Mi Perfil</button>
+        <button onclick="eliminarCuenta()" style="background:#ff4d4d; margin-top:20px;">Eliminar Cuenta</button> </div>
+    <script src="dashboard.js"></script>
+    <script src="perfil.js"></script>
+</body>
+</html>

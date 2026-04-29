@@ -1,15 +1,40 @@
-<div class="container">
-        <h2>Tareas Académicas</h2>
-            <form onsubmit="agregarTarea(event)">
-                    <input type="text" id="tituloTarea" placeholder="Título" required> <select id="selectCurso" required></select> <input type="date" id="fechaEntrega" required> <select id="prioridad"> <option value="Alta">Alta</option>
-                                <option value="Media">Media</option>
-                                            <option value="Baja">Baja</option>
-                                                    </select>
-                                                            <textarea id="descripcionTarea" placeholder="Descripción"></textarea> <button type="submit">Agregar Tarea</button>
-                                                                </form>
-                                                                    <div>
-                                                                            Filtros: 
-                                                                                    <button onclick="filtrarTareas('Todas')">Todas</button>
-                                                                                            <button onclick="filtrarTareas('Pendiente')">Pendientes</button> </div>
-                                                                                                <div id="listaTareas"></div>
-                                                                                                </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Tareas - Gestor Académico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" style="max-width: 700px;">
+        <nav><a href="dashboard.html">Volver al Dashboard</a></nav>
+        <h2>Gestión de Tareas</h2>
+
+        <form id="formTareas">
+            <input type="text" id="tituloTarea" placeholder="Título de la Tarea" required> [cite: 568, 625]
+            <select id="selectCurso" required> [cite: 569, 625]
+                <option value="">Selecciona un Curso</option>
+            </select>
+            <input type="date" id="fechaEntrega" required> [cite: 570, 625]
+            <select id="prioridad"> [cite: 571]
+                <option value="Alta">Prioridad Alta</option>
+                <option value="Media">Prioridad Media</option>
+                <option value="Baja">Prioridad Baja</option>
+            </select>
+            <textarea id="descripcion" placeholder="Descripción de la tarea"></textarea> [cite: 572]
+            <button type="submit">Guardar Tarea</button> [cite: 575]
+        </form>
+
+        <div class="filtros" style="margin-top: 20px;">
+            <button onclick="filtrar('Todas')">Todas</button> [cite: 580]
+            <button onclick="filtrar('Pendiente')">Pendientes</button> [cite: 573]
+            <button onclick="filtrar('Completada')">Completadas</button> [cite: 573]
+        </div>
+
+        <div id="listaTareas" style="margin-top: 20px;">
+            </div>
+    </div>
+
+    <script src="dashboard.js"></script> <script src="tareas.js"></script>
+</body>
+</html>

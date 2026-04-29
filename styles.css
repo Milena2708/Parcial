@@ -1,7 +1,59 @@
-:root { --bg: #ffffff; --text: #333; }
-body.dark-mode { --bg: #1a1a1a; --text: #f4f4f4; }
-body { background-color: var(--bg); color: var(--text); font-family: sans-serif; transition: 0.3s; }
-.container { max-width: 800px; margin: auto; padding: 20px; }
-input, select, button { display: block; width: 100%; margin: 10px 0; padding: 10px; }
-nav a { margin-right: 15px; text-decoration: none; color: deepskyblue; }
-.hidden { display: none; }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --rosa-pastel: #ffd1dc;
+    --rosa-fuerte: #ffb7c5;
+    --texto-oscuro: #333333;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--rosa-pastel);
+    color: var(--texto-oscuro);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 { color: var(--texto-oscuro); font-weight: 600; }
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--rosa-fuerte);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    background-color: var(--rosa-fuerte);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover { background-color: #ff9aa2; }
+
+nav a {
+    color: var(--texto-oscuro);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}

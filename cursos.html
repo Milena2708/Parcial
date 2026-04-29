@@ -1,13 +1,30 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Cursos - Gestor Académico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" style="max-width: 600px;">
+        <nav><a href="dashboard.html">Volver al Dashboard</a></nav>
         <h2>Gestión de Cursos</h2>
-            <form onsubmit="agregarCurso(event)">
-                    <input type="text" id="nombreCurso" placeholder="Nombre del Curso" required> <input type="text" id="docente" placeholder="Docente" required> <input type="text" id="horario" placeholder="Horario" required> <input type="text" id="modalidad" placeholder="Aula o Modalidad" required> <input type="number" id="creditos" placeholder="Créditos" required> <button type="submit">Agregar Curso</button>
-                        </form>
-                            <table id="listaCursos">
-                                    <thead>
-                                                <tr><th>Curso</th><th>Docente</th><th>Acciones</th></tr>
-                                                        </thead>
-                                                                <tbody></tbody>
-                                                                    </table>
-                                                                        <a href="dashboard.html">Volver al Dashboard</a>
-                                                                        </div>
+        
+        <form id="formCursos">
+            <input type="text" id="nombreCurso" placeholder="Nombre del Curso" required> [cite: 555, 624]
+            <input type="text" id="docente" placeholder="Nombre del Docente" required> [cite: 556]
+            <input type="text" id="horario" placeholder="Horario (Ej: Lun 8-10am)" required> [cite: 557]
+            <input type="text" id="modalidad" placeholder="Aula o Modalidad" required> [cite: 558]
+            <input type="number" id="creditos" placeholder="Número de Créditos" required> [cite: 559]
+            <button type="submit">Agregar Curso</button> [cite: 561]
+        </form>
+
+        <hr>
+        <h3>Lista de Cursos</h3>
+        <div id="listaCursos">
+            </div>
+    </div>
+
+    <script src="dashboard.js"></script> <script src="cursos.js"></script>
+</body>
+</html>
