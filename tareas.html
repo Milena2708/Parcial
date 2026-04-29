@@ -1,0 +1,15 @@
+<div class="container">
+        <h2>Tareas Académicas</h2>
+            <form onsubmit="agregarTarea(event)">
+                    <input type="text" id="tituloTarea" placeholder="Título" required> <select id="selectCurso" required></select> <input type="date" id="fechaEntrega" required> <select id="prioridad"> <option value="Alta">Alta</option>
+                                <option value="Media">Media</option>
+                                            <option value="Baja">Baja</option>
+                                                    </select>
+                                                            <textarea id="descripcionTarea" placeholder="Descripción"></textarea> <button type="submit">Agregar Tarea</button>
+                                                                </form>
+                                                                    <div>
+                                                                            Filtros: 
+                                                                                    <button onclick="filtrarTareas('Todas')">Todas</button>
+                                                                                            <button onclick="filtrarTareas('Pendiente')">Pendientes</button> </div>
+                                                                                                <div id="listaTareas"></div>
+                                                                                                </div>

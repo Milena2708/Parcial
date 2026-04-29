@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <title>Configuración - Gestor Académico</title>
+            <link rel="stylesheet" href="styles.css"> </head>
+            <body>
+                <div class="container">
+                        <nav>
+                                    <a href="dashboard.html">Volver al Dashboard</a>
+                                            </nav>
+
+                                                    <h2>Configuración de Usuario</h2>
+                                                            <form onsubmit="guardarConfiguracion(event)">
+                                                                        <label>
+                                                                                        <input type="checkbox" id="modoOscuro"> Activar Modo Oscuro
+                                                                                                    </label>
+
+                                                                                                                <label>
+                                                                                                                                <input type="checkbox" id="ocultarCompletadas"> Ocultar tareas completadas
+                                                                                                                                            </label>
+
+                                                                                                                                                        <div style="margin-top: 15px;">
+                                                                                                                                                                        <label for="nombreVisible">Nombre visible en el dashboard:</label>
+                                                                                                                                                                                        <input type="text" id="nombreVisible" placeholder="Ej. Juan Pérez">
+                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                <button type="submit" style="margin-top: 20px;">Guardar Preferencias</button> </form>
+                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                        <script src="app.js"></script> <script>
+                                                                                                                                                                                                                                checkAuth(); // 
+                                                                                                                                                                                                                                        // Lógica para cargar preferencias guardadas
+                                                                                                                                                                                                                                                window.onload = cargarPreferencias;
+                                                                                                                                                                                                                                                    </script>
+                                                                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                                                                    </html>

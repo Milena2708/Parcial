@@ -1,0 +1,19 @@
+<div class="container">
+        <nav>
+                <a href="cursos.html">Cursos</a> | <a href="tareas.html">Tareas</a> | 
+                        <a href="perfil.html">Perfil</a> | <a href="configuracion.html">Configuración</a> |
+                                <a href="#" onclick="logout()">Cerrar Sesión</a>
+                                    </nav>
+                                        <h1 id="welcome">Bienvenido</h1>
+                                            <div id="stats">
+                                                    <p>Cursos registrados: <span id="totalCursos">0</span></p> [cite: 27]
+                                                            <p>Tareas pendientes: <span id="tareasPendientes">0</span></p> [cite: 29]
+                                                                </div>
+                                                                </div>
+                                                                <script src="app.js"></script>
+                                                                <script>
+                                                                    checkAuth();
+                                                                        const user = JSON.parse(localStorage.getItem(KEYS.SESSION));
+                                                                            const config = JSON.parse(localStorage.getItem(KEYS.CONFIG));
+                                                                                document.getElementById('welcome').innerText = `Hola, ${config?.nombreVisible || user.nombres}`; // [cite: 81]
+                                                                                </script>

@@ -1,0 +1,7 @@
+:root { --bg: #ffffff; --text: #333; }
+body.dark-mode { --bg: #1a1a1a; --text: #f4f4f4; }
+body { background-color: var(--bg); color: var(--text); font-family: sans-serif; transition: 0.3s; }
+.container { max-width: 800px; margin: auto; padding: 20px; }
+input, select, button { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+nav a { margin-right: 15px; text-decoration: none; color: deepskyblue; }
+.hidden { display: none; }
